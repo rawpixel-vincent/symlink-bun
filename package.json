@@ -1,0 +1,16 @@
+{
+  "name": "symlink-bun",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "setup:bun": "rm -rf packages/service1/node_modules && bun install --cwd ./packages/service1",
+    "setup:npm": "rm -rf packages/service1/node_modules && cd ./packages/service1 && npm install && cd -",
+    "dev:bun": "bun --cwd ./packages/service1 dev:bun",
+    "dev:node": "npm run --cwd ./packages/service1 dev:node",
+    "dev:node:symlinks": "npm run --cwd ./packages/service1 dev:node:symlinks",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
